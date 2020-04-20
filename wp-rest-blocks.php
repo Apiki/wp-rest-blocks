@@ -8,6 +8,7 @@
  * Text Domain:     wp-rest-blocks
  * Domain Path:     /languages
  * Version:         0.1.0
+ * GitHub Plugin URI: https://github.com/Apiki/wp-rest-blocks
  *
  * @package         WP_REST_Blocks
  */
