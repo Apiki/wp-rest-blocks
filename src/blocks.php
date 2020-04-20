@@ -20,12 +20,7 @@ function bootstrap() {
  * Add rest api fields.
  */
 function wp_rest_blocks_init() {
-	$types = get_post_types(
-		[
-			'show_in_rest' => true,
-		],
-		'names'
-	);
+	$types = apply_filters( 'wp_rest_blocks_post_types', array( 'page', 'post' ) );
 
 	register_rest_field(
 		$types,
