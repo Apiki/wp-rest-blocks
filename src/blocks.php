@@ -93,9 +93,11 @@ function handle_do_block( $block ) {
 		return false;
 	}
 
-	$block['rendered'] = render_block( $block );
-	$block['rendered'] = do_shortcode( $block['rendered'] );
-	$block['attrs']    = wp_parse_args( $block['attrs'], get_block_defaults( $block['blockName'] ) );
+	$block['rendered']   = render_block( $block );
+	$block['rendered']   = do_shortcode( $block['rendered'] );
+	$block['attrs']      = wp_parse_args( $block['attrs'], get_block_defaults( $block['blockName'] ) );
+	$block['attributes'] = $block['attrs'];
+	$block['name']       = $block['blockName'];
 	if ( ! empty( $block['innerBlocks'] ) ) {
 		$output = [];
 		foreach ( $block['innerBlocks'] as $_block ) {
